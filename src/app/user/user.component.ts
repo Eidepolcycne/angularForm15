@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { emailvalidator } from '../email-validator';
 
 @Component({
   selector: 'app-user',
@@ -12,7 +13,7 @@ export class UserComponent {
   userForm = this.fb.group({
     username: [''],
     credentials: this.fb.group({ 
-      email: [''],
+      email: ['', [Validators.required, emailvalidator]],
       password: ['']
     }),
     address: this.fb.group({
