@@ -1,5 +1,5 @@
 <div >
-  <form (formGroup)="userForm" (ngSubmit)="userForm.valid">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
   <label>
     Nom: <input type="text" formControlName="username">
   </label>
@@ -14,7 +14,7 @@
       Code postal: <input type="number" formControlName="zipCode">
       Ville: <input type="text" formControlName="city">
   </div>
-  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+  <button type="submit">Submit</button>
 </form>
 </div>
 <div *ngIf="submitted">

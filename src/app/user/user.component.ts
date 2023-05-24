@@ -37,7 +37,7 @@ export class UserComponent {
         zipCode: this.userForm.value.address?.zipCode
       }
     };
-    // this.submitted = true;
-    // this.userForm.reset();
+    this.submitted = true;
+    this.userForm.reset();
   }
 }
